@@ -15,7 +15,7 @@ import java.io.Reader;
  */
 public class BashRunner {
 	
-	private String getFullResourceScript(String scriptName) {
+	private String getResourceScriptPath(String scriptName) {
 		return System.getProperty("user.dir") + File.separator + "resources" + File.separator + scriptName;
 	}
 	
@@ -29,22 +29,14 @@ public class BashRunner {
 	}
 	
 	public void runCommand(String link, String path) {
-		ProcessBuilder pb = new ProcessBuilder(getFullResourceScript("downloadAndMove.sh"), link, path);
+		ProcessBuilder pb = new ProcessBuilder(getResourceScriptPath("downloadAndMove.sh"), link, path);
 		try {
 			Process p = pb.start();
-			p.waitFor();
-			if (p.exitValue() == 0) {
-				System.out.println("downloadAndMove.sh exited successfully");
-				displayOutput(p.getInputStream());
-			} else {
-				System.out.println("ERROR while running downloadAndMove.sh");
-			}
+			System.out.println("downloadAndMove.sh exited successfully");
+			displayOutput(p.getInputStream());
 		} catch (IOException e) {
 			System.out.println("Couldn't run downloadAndMove.sh, link: " + link
 					+ " | path: " + path);
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			System.out.println("downloadAndMove.sh didn't exit");
 			e.printStackTrace();
 		}
 	}
