@@ -105,12 +105,4 @@ public class BasePage {
 	            }
 	        };
 	    }
-	 
-	 public void setTimer() {
-		 ((JavascriptExecutor) driver).executeScript("timer=1;");
-	 }
-	 
-	 public void callClock() {
-		 ((JavascriptExecutor) driver).executeScript("clock();");
-	 }
 }

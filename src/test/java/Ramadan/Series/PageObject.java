@@ -38,26 +38,9 @@ public class PageObject extends BasePage{
 				break;
 			}
 		}
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		WebElement timer = driver.findElement(By.id("timerHolder"));
 		waitForBrowserToLoadCompletely();
-		System.out.println(timer.getText());
-		System.out.println(timer.getText());
-		setTimer();
-		callClock();
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(timer.getText());
-		
+
 		System.out.println(timer.findElement(By.tagName("a")).getAttribute("href"));
 		driver.get(timer.findElement(By.tagName("a")).getText());
 	}
