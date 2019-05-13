@@ -13,12 +13,12 @@ public class Script extends Driver {
 
 	@DataProvider(name = "urls")
 	public static Object[][] urls() {
-		return new Object[][] { { "https://rmdan.net/157114/مسلسل-الزوجة-الـ18", "/mnt/public/" },
-				{ "https://rmdan.net/157103/مسلسل-لمس-أكتاف", "/mnt/public/" },
-				{ "https://rmdan.net/157104/مسلسل-هوجان", "/mnt/public/" },
-				{ "https://rmdan.net/157110/مسلسل-ﻵخر-نفس", "/mnt/public/" },
-				{ "https://rmdan.net/157138/مسلسل-طلقة-حظ", "/mnt/public/" },
-				{ "https://rmdan.net/157135/مسلسل-أبو-جبل", "/mnt/public/" } };
+		return new Object[][] { { "https://rmdan.net/157114/مسلسل-الزوجة-الـ18", "/mnt/public/Shows/Alzoga_18/" },
+				{ "https://rmdan.net/157103/مسلسل-لمس-أكتاف", "/mnt/public/Shows/Lams_Aktaf/" },
+				{ "https://rmdan.net/157104/مسلسل-هوجان", "/mnt/public/Shows/Hogan/" },
+				{ "https://rmdan.net/157110/مسلسل-ﻵخر-نفس", "/mnt/public/Shows/La_Akher_Nafas/" },
+				{ "https://rmdan.net/157138/مسلسل-طلقة-حظ", "/mnt/public/Shows/Lucky_Bullet/" },
+				{ "https://rmdan.net/157135/مسلسل-أبو-جبل", "/mnt/public/Shows/Abo_Gabal/" } };
 	}
 
 	@BeforeTest
