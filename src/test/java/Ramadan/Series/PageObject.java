@@ -28,7 +28,7 @@ public class PageObject extends BasePage{
 	public String getDownloadLink() {
 		driver.get(downloadBtns.get(0).getAttribute("href"));
 		for (int i = 0; i < links.size(); i++) {
-			if(links.get(i).getAttribute("href") != null && links.get(i).getAttribute("href").contains("https://akoam.net/download/")) {
+			if(links.get(i).getAttribute("href") != null && (links.get(i).getAttribute("href").contains("https://rmdan.net/download/") || links.get(i).getAttribute("href").contains("http://akoam.com/download/"))) {
 				driver.get(links.get(i).getAttribute("href"));
 				break;
 			}
