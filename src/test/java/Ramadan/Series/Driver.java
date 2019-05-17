@@ -12,6 +12,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import Ramadan.Series.Services.RamadanLogger;
+
 public class Driver {
 	public static WebDriver driver;
 	public static File dataFile;
@@ -32,8 +34,7 @@ public class Driver {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		} catch (MalformedURLException e) {
-			System.out.println("Couldn't create a remote driver");
-			e.printStackTrace();
+			RamadanLogger.error("Couldn't create a remote driver", e);
 		}
 
 	}

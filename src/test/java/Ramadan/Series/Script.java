@@ -7,13 +7,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Ramadan.Series.Services.BashRunner;
+import Ramadan.Series.Services.RamadanLogger;
 
 public class Script extends Driver {
 	PageObject pageObj;
 
 	@DataProvider(name = "urls")
 	public static Object[][] urls() {
-		return new Object[][] { { "https://rmdan.net/157114/مسلسل-الزوجة-الـ18", "/mnt/public/Shows/Alzoga_18/" },
+		return new Object[][] { { "https://rmdan.org/157114/مسلسل-الزوجة-الـ18", "/mnt/public/Shows/Alzoga_18/" },
 				{ "https://rmdan.net/157103/مسلسل-لمس-أكتاف", "/mnt/public/Shows/Lams_Aktaf/" },
 				{ "https://rmdan.net/157104/مسلسل-هوجان", "/mnt/public/Shows/Hogan/" },
 				{ "https://rmdan.net/157110/مسلسل-ﻵخر-نفس", "/mnt/public/Shows/La_Akher_Nafas/" },
@@ -30,6 +31,7 @@ public class Script extends Driver {
 	public void download(String url, String path) {
 		navigate(url);
 		String link = pageObj.getDownloadLink();
+		RamadanLogger.info(link);
 		BashRunner bashRunner = new BashRunner();
 		bashRunner.runCommand(link, path);
 	}

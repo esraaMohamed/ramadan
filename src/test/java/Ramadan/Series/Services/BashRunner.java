@@ -24,7 +24,7 @@ public class BashRunner {
 	    BufferedReader br = new BufferedReader(r);
 	    String line;
 	    while ((line = br.readLine()) != null) {
-	        System.out.println(line);
+	    	RamadanLogger.info(line);
 	    }
 	}
 	
@@ -32,12 +32,11 @@ public class BashRunner {
 		ProcessBuilder pb = new ProcessBuilder(getResourceScriptPath("downloadAndMove.sh"), link, path);
 		try {
 			Process p = pb.start();
-			System.out.println("downloadAndMove.sh exited successfully");
+			RamadanLogger.info("downloadAndMove.sh Started");
 			displayOutput(p.getInputStream());
 		} catch (IOException e) {
-			System.out.println("Couldn't run downloadAndMove.sh, link: " + link
-					+ " | path: " + path);
-			e.printStackTrace();
+			RamadanLogger.error("Couldn't run downloadAndMove.sh, link: " + link
+					+ " | path: " + path, e);
 		}
 	}
 }
