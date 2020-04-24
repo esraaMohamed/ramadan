@@ -16,7 +16,7 @@ import java.io.Reader;
 public class BashRunner {
 	
 	private String getResourceScriptPath(String scriptName) {
-		return System.getProperty("user.dir") + File.separator + "resources" + File.separator + scriptName;
+		return System.getProperty("user.dir") + File.separator + "akoam-downloader/resources" + File.separator + scriptName;
 	}
 	
 	private void displayOutput(InputStream inputStream) throws IOException {

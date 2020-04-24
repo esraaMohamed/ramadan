@@ -19,7 +19,11 @@ public class Script extends Driver {
 				{ "https://rmdan.net/157104/مسلسل-هوجان", "/mnt/public/Shows/Hogan/" },
 				{ "https://rmdan.net/157110/مسلسل-ﻵخر-نفس", "/mnt/public/Shows/La_Akher_Nafas/" },
 				{ "https://rmdan.net/157138/مسلسل-طلقة-حظ", "/mnt/public/Shows/Lucky_Bullet/" },
-				{ "https://rmdan.net/157135/مسلسل-أبو-جبل", "/mnt/public/Shows/Abo_Gabal/" } };
+				{ "https://rmdan.net/157135/مسلسل-أبو-جبل", "/mnt/public/Shows/Abo_Gabal/" },
+				{ "https://myakoam.com/157111/%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D8%AD%D9%83%D8%A7%D9%8A%D8%AA%D9%8A", "/mnt/public/Shows/Hekayty/" },
+				{ "https://myakoam.com/157113/%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D8%B2%D9%8A-%D8%A7%D9%84%D8%B4%D9%85%D8%B3", "/mnt/public/Shows/Zy_El_Shams/" },
+				{ "https://myakoam.com/157108/%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D9%88%D9%84%D8%AF-%D8%A7%D9%84%D8%BA%D9%84%D8%A7%D8%A8%D8%A9", "/mnt/public/Shows/Weld_El_Ghalaba/" },
+				{ "https://myakoam.com/157109/%D9%85%D8%B3%D9%84%D8%B3%D9%84-%D9%82%D8%A7%D8%A8%D9%8A%D9%84", "/mnt/public/Shows/Kabel/" }};
 	}
 
 	@BeforeTest
